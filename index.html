@@ -2,28 +2,24 @@
   <head>
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script>
       AFRAME.registerComponent('log', {
         schema: {type: 'string'},
-
         init: function () {
           var stringToLog = this.data;
           console.log(stringToLog);
         }
       });
-
       var scene1 = document.querySelector('a-scene');
       console.log(scene1.querySelector('#redBox'));
-
     </script>
   </head>
   <body>
     <a-scene>
-    <a-box id="redBox" class="clickable" color="red"></a-box>
-    <a-sphere id="blueSphere" class="clickable" color="blue"></a-sphere>
-    <a-box color="green"></a-box>
-    <a-entity light="type: ambient"></a-entity>
-    <a-entity light="type: directional"></a-entity>
+      <!--  <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>-->
+        <a-box src="https://pbs.twimg.com/profile_images/605471549420933121/vLBlcne__400x400.jpg" position="0 2 -5" scale="5 5 5"></a-box>
+
   </a-scene>
   </body>
 </html>
